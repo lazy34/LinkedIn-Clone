@@ -1,11 +1,18 @@
-
+import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import './App.css'
+import Login from './components/Login';
+
 
 function App() {
 
   return (
     <>
-      <h1>Lets build LinkedIn</h1>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Login/>}>
+          </Route>
+          </Routes>
+      </Router>
     </>
   )
 }
